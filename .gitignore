@@ -61,3 +61,7 @@ Thumbs.db
 .envrc
 *.secrets
 config.json
+
+# databaseのデータは無視
+db/data/*
+!db/data/.keep
