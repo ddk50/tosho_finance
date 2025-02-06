@@ -1,0 +1,5 @@
+include:
+  - db/compose.yml
+networks:
+  default:
+    name: tosho_finance

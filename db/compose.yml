@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql_container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_USER: finance_user
+      MYSQL_PASSWORD: finance_pass
+      MYSQL_DATABASE: financial_db
+    ports:
+      - "9000:3306"
+    volumes:
+      - data:/var/lib/mysql
+
+volumes:
+  mysql_data:
