@@ -1,0 +1,21 @@
+[project]
+name = "tosho-finance"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "takahashi",email = "arena431@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "apscheduler (>=3.11.0,<4.0.0)",
+    "yfinance (>=0.2.52,<0.3.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+package-mode = false
