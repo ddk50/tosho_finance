@@ -1,5 +1,4 @@
 from app.infra.yahoo_finance_repository import YahooFinanceRepository
-from app.infra.mysql_repository import MySQLRepository, MySQLCompanyRepository
 from app.repository.financial_repository import FinancialRepository
 
 

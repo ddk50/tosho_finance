@@ -1,7 +1,9 @@
 import unittest
 from typing import List
+from yahooquery import Ticker
 
 from app.infra.mock_finance_repository import MockFinancialRepository
+from app.infra.yahoo_finance_repository import YahooFinanceRepository
 from app.repository.financial_repository import FinancialData
 from app.repository.financial_repository import FinancialRepository
 
@@ -46,6 +48,25 @@ class TestFinancialRepository(unittest.TestCase):
         self.assertEqual(len(all_data), 3)
         self.assertEqual(all_data[0].company_name, "Apple Inc.")
         self.assertEqual(all_data[1].symbol, "AMZN")
+
+
+class TestYFinancialRepository(unittest.TestCase):
+    def test_fetch(self):
+        companies = {
+            "トヨタ自動車": "7203.T",
+            "ソニー": "6758.T"
+        }
+
+        api: FinancialRepository = YahooFinanceRepository()
+        data = api.fetch("AAPL", "Apple Inc.")
+
+        for name, symbol in companies.items():
+            data = api.fetch(symbol, name)
+            print(f"${data}")
+
+
+# class TestFinancialState(unittest.TestCase):
+#     def test_fetch_fiscal_report(self):
 
 if __name__ == '__main__':
     unittest.main()

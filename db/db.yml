@@ -1,7 +1,0 @@
-database:
-  user: "finance_user"
-  password: "finance_pass"
-  host: "localhost"
-  port: 3306
-  name: "financial_db"
-  driver: "mysql+pymysql"

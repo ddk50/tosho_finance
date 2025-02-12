@@ -6,10 +6,13 @@ authors = [
     {name = "takahashi",email = "arena431@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.8.1, <4.0"
 dependencies = [
     "apscheduler (>=3.11.0,<4.0.0)",
-    "yfinance (>=0.2.52,<0.3.0)"
+    "yfinance (>=0.2.52,<0.3.0)",
+    "yahooquery (>=2.3.7,<3.0.0)",
+    "sqlalchemy (>=2.0.38,<3.0.0)",
+    "pymysql (>=1.1.1,<2.0.0)"
 ]
 
 
